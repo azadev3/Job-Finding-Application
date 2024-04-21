@@ -1,0 +1,243 @@
+.not-logged-searchwork {
+  padding-top: 4rem;
+  min-height: 100vh;
+  width: 100%;
+  transition: 0.3s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  .container-searchwork {
+    width: 84%;
+    height: 100%;
+    .header-searchwork {
+      margin-top: 1rem;
+      width: 100%;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      .header-content {
+        position: relative;
+        display: flex;
+        column-gap: 1rem;
+        padding-top: 0.2rem;
+        align-items: center;
+
+        .categories {
+          user-select: none;
+          position: relative;
+          border-radius: 5px;
+          cursor: pointer;
+          padding: 3px 0px;
+          flex-direction: row-reverse;
+          display: flex;
+          align-items: center;
+          column-gap: 10px;
+          span {
+            font-size: 14px;
+            width: 100px;
+          }
+          background-color: rgb(82, 215, 255);
+          transition: 0.2s ease-out;
+          #listIcon {
+            padding-left: 20px;
+          }
+        }
+        .categories:hover {
+          background-color: honeydew;
+        }
+
+        //categories box in category div
+        .searchWorkCategory {
+          user-select: none;
+          border-radius: 5px;
+          position: absolute;
+          top: 2.7rem;
+          left: 0;
+          width: 300px;
+          height: 300px;
+          background-color: rgb(255, 255, 255);
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: flex-start;
+          .main-category {
+            position: relative;
+            width: 100%;
+            padding: 5px;
+            background-color: honeydew;
+            border-radius: 5px;
+            margin: 0.2rem 0rem;
+            cursor: help;
+            .bi-caret-right {
+              position: absolute;
+              right: 2rem;
+              bottom: 0.1rem;
+              font-size: 24px;
+              color: #696969;
+            }
+
+            .contentMenu {
+              overflow-y: auto;
+              width: 300px;
+              height: 400px;
+              background-color: rgb(255, 255, 255);
+              position: absolute;
+              left: 18rem;
+              top: 0;
+              z-index: 1;
+              box-shadow: 0px 0px 1.5px 0px rgb(77, 77, 77);
+              .alt-li {
+                padding: 3px;
+                margin: 0.1rem 0rem;
+                border-radius: 3px;
+                background-color: honeydew;
+                color: #6e5e5e;
+              }
+              .alt-li:hover {
+                background-color: rgb(116, 133, 204);
+                cursor: pointer;
+                color: white;
+              }
+            }
+
+            .contentMenu::-webkit-scrollbar {
+              width: 8px;
+            }
+
+            .contentMenu::-webkit-scrollbar-thumb {
+              background-color: rgb(185, 185, 185);
+            }
+
+            .contentMenu::-webkit-scrollbar-track {
+              background-color: rgb(255, 255, 255);
+            }
+          }
+          .main-category:hover {
+            background-color: rgb(82, 215, 255);
+          }
+        }
+        //categories box in category div
+
+        .input-area {
+          z-index: 99;
+          position: relative;
+          display: flex;
+          align-items: center;
+          input[type="search"] {
+            width: 40rem;
+            height: 2.1rem;
+            border: none;
+            outline: none;
+            box-shadow: 0px 0px 5px 0px rgb(99, 99, 99);
+            border-radius: 10px;
+            padding-left: 33px;
+            padding-right: 10px;
+          }
+          input[type="search"]:focus {
+            box-shadow: 0px 0px 5px 0px rgb(79, 112, 255);
+            border: 1px solid rgb(62, 178, 224);
+          }
+          input[type="search"]:focus::placeholder {
+            opacity: 0;
+            transition: opacity 0.4s ease;
+          }
+        }
+
+        .filter {
+          user-select: none;
+          width: 100px;
+          background-color: rgb(82, 215, 255);
+          justify-content: space-evenly;
+          align-items: center;
+          display: flex;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: 0.1s ease-out;
+        }
+        .filter:hover {
+          background-color: honeydew;
+        }
+
+        //filter-box
+        .filter-box {
+          cursor: auto;
+          position: absolute;
+          right: 0;
+          top: 2.5rem;
+          width: 500px;
+          height: 50px;
+          border-radius: 5px;
+          background-color: honeydew;
+          border: 1px solid #cececea8;
+          z-index: 100;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          #saveBtn {
+            padding: 3px 6px;
+            font-size: 13px;
+            border: none;
+            cursor: pointer;
+            background-color: rgb(150, 248, 150);
+          }
+          #saveBtn:hover {
+            background-color: honeydew;
+            border: 1px solid #cececea8;
+          }
+          #resetBtn {
+            padding: 3px 6px;
+            font-size: 13px;
+            border: none;
+            cursor: pointer;
+            background-color: rgba(41, 102, 41, 0.63);
+            color: white;
+          }
+          #resetBtn:hover {
+            background-color: rgb(77, 77, 77);
+            border: 1px solid #cececea8;
+          }
+          .filter1,
+          .filter2 {
+            width: 170px;
+            height: 30px;
+            border: none;
+            outline: none;
+            box-shadow: 0px 0px 10px 0px rgba(62, 178, 224, 0.432);
+            color: #696969;
+            font-weight: 600;
+            cursor: help;
+          }
+        }
+
+        #searchBtn {
+          padding: 3px 25px;
+          background-color: white;
+          border: 1px solid rgba(0, 0, 0, 0.651);
+          font-weight: 600;
+          letter-spacing: -0.5px;
+          cursor: pointer;
+          border-radius: 5px;
+        }
+        #searchBtn:hover {
+          background-color: rgb(206, 218, 206);
+        }
+      }
+      .warningMsg {
+        width: 80%;
+        height: 30px;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p {
+          font-size: 12px;
+          color: rgb(177, 88, 88);
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
